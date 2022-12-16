@@ -1,0 +1,38 @@
+﻿<Window x:Class="Kviz.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Kviz"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="500" Width="600">
+    <Grid>
+        <Image Source="obrazky/pozadi.jpg" Panel.ZIndex="-100" VerticalAlignment="Top" RenderTransformOrigin="0.609,0.596"/>
+        <Grid>
+
+            <Grid.RowDefinitions>
+                <RowDefinition Height="175*"></RowDefinition>
+                <RowDefinition Height="271*"></RowDefinition>
+                <RowDefinition Height="38*"></RowDefinition>
+            </Grid.RowDefinitions>
+
+            <Label x:Name="lblQuestion"  Content="Smrdí ptákovi péro" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="36" Margin="55,22,49,10" Foreground="White" />
+            <StackPanel x:Name="stackAnswers" Margin="122,155,49,28" Grid.RowSpan="2">
+                <RadioButton Content="Answer 1" Tag="0" Foreground="White" Margin="0,42,0,0" FontSize="20" FontFamily="Arial" FontWeight="Bold" />
+                <RadioButton Content="Answer 2" Tag="1" Foreground="White" Margin="0,42,0,0" FontSize="20" FontFamily="Arial" FontWeight="Bold"/>
+                <RadioButton Content="Answer 3" Tag="2" Foreground="White" Margin="0,42,0,0" FontSize="20" FontFamily="Arial" FontWeight="Bold"/>
+                <RadioButton Content="Answer 4" Tag="3" Foreground="White" Margin="0,42,0,0" FontSize="20" FontFamily="Arial" FontWeight="Bold" />
+            </StackPanel>
+
+            <Button x:Name="btnNext" Content="Další" Click="btnNext_Click" Margin="0,271,300,0" Grid.Row="1" Background="Black" Foreground="White" FontSize="20" BorderBrush="#FF335DB5" Grid.RowSpan="2" BorderThickness="3px"/>
+            <Button x:Name="btnReset" Content="Reset" Click="btnReset_Click" Margin="300,271,0,0" Grid.Row="1" Background="Black" Foreground="White" FontSize="20" BorderBrush="#FF285FBD" Grid.RowSpan="2" BorderThickness="3px"/>
+            <Image HorizontalAlignment="Left" Height="100" Margin="148,-10,0,0" VerticalAlignment="Top" Width="100"/>
+
+        </Grid>
+        <Image HorizontalAlignment="Left" Height="100" Margin="214,294,0,0" VerticalAlignment="Top" Width="100"/>
+    </Grid>
+
+
+
+
+</Window>
